@@ -1,0 +1,42 @@
+1.1 Install different tools/packages on Ubuntu DEVASC-LABVM:
+Task preparation and implementation: 
+•	Python 3.8 and PIP Installation:
+o	Open a terminal and Run the following commands:
+  sudo apt update
+  sudo apt install python3.8 python3-pip
+•	Visual Studio Code Installation:
+o	Open a terminal and Run the following commands:
+  sudo apt update
+  sudo apt install software-properties-common apt-transport-https wget
+  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  sudo apt update
+  sudo apt install code
+  Jupyter Notebook Installation:
+o	Open a terminal and Run the following commands:
+  sudo apt update
+  sudo apt install jupyter-notebook
+•	Python IDLE Installation:
+o	Open a terminal and Run the following command:
+  sudo apt install idle
+Task troubleshooting: 
+•	Python 3.8 and PIP:
+o	Ensure that you have an active internet connection.
+o	Double-check if the package repositories are properly configured in your system.
+o	Try updating the package lists by running: sudo apt update.
+o	If the installation fails, check for any error messages and search for possible solutions online specific to your Ubuntu version.
+•	Visual Studio Code:
+o	Confirm that you have added the Microsoft GPG key and repository correctly.
+o	Ensure that your system meets the necessary dependencies for Visual Studio Code.
+o	If the installation encounters errors, check the error messages and search for solutions or alternative installation methods specific to your Ubuntu version.
+•	Jupyter Notebook:
+o	Check if you have the necessary dependencies installed, such as Python and its related packages.
+o	Make sure you have followed the correct installation steps specific to Jupyter Notebook on Ubuntu.
+o	If encountering issues, search for specific troubleshooting steps related to Jupyter Notebook installation on Ubuntu.
+•	Python IDLE:
+o	Verify if the idle package is available in the default repositories for your Ubuntu version.
+o	If the installation fails, check for any error messages and search for possible solutions online specific to your Ubuntu version.
+•	In general, when troubleshooting, carefully review any error messages or logs that are displayed during the installation process. Search for solutions specific to your Ubuntu version and the tools/packages you are installing. Online forums, official documentation, and community resources can often provide valuable insights and troubleshooting tips.
+Task verification:
+•	Verify that all the tools/packages have been successfully installed on Ubuntu DEVASC-LABVM.
+•	Test each installed tool/package to ensure they are functioning correctly.
