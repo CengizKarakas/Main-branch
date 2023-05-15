@@ -1,23 +1,23 @@
 1.1 Install different tools/packages on Ubuntu DEVASC-LABVM:
 Task preparation and implementation: 
-•	Python 3.8 and PIP Installation:
-o	Open a terminal and Run the following commands:
+Python 3.8 and PIP Installation:
+  Open a terminal and Run the following commands:
   sudo apt update
   sudo apt install python3.8 python3-pip
-•	Visual Studio Code Installation:
-o	Open a terminal and Run the following commands:
+Visual Studio Code Installation:
+  Open a terminal and Run the following commands:
   sudo apt update
   sudo apt install software-properties-common apt-transport-https wget
   wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | sudo apt-key add -
   sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
   sudo apt update
   sudo apt install code
-  Jupyter Notebook Installation:
-o	Open a terminal and Run the following commands:
+Jupyter Notebook Installation:
+  Open a terminal and Run the following commands:
   sudo apt update
   sudo apt install jupyter-notebook
-•	Python IDLE Installation:
-o	Open a terminal and Run the following command:
+Python IDLE Installation:
+  Open a terminal and Run the following command:
   sudo apt install idle
 Task troubleshooting: 
 •	Python 3.8 and PIP:
