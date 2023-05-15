@@ -20,23 +20,23 @@ Python IDLE Installation:
   Open a terminal and Run the following command:
   sudo apt install idle
 Task troubleshooting: 
-•	Python 3.8 and PIP:
+Python 3.8 and PIP:
   Ensure that you have an active internet connection.
   Double-check if the package repositories are properly configured in your system.
   Try updating the package lists by running: sudo apt update.
   If the installation fails, check for any error messages and search for possible solutions online specific to your Ubuntu version.
-•	Visual Studio Code:
+Visual Studio Code:
   Confirm that you have added the Microsoft GPG key and repository correctly.
   Ensure that your system meets the necessary dependencies for Visual Studio Code.
   If the installation encounters errors, check the error messages and search for solutions or alternative installation methods specific to your Ubuntu version.
-•	Jupyter Notebook:
+Jupyter Notebook:
   Check if you have the necessary dependencies installed, such as Python and its related packages.
   Make sure you have followed the correct installation steps specific to Jupyter Notebook on Ubuntu.
   If encountering issues, search for specific troubleshooting steps related to Jupyter Notebook installation on Ubuntu.
-•	Python IDLE:
+Python IDLE:
   Verify if the idle package is available in the default repositories for your Ubuntu version.
   If the installation fails, check for any error messages and search for possible solutions online specific to your Ubuntu version.
-•	In general, when troubleshooting, carefully review any error messages or logs that are displayed during the installation process. Search for solutions specific to your Ubuntu version and the tools/packages you are installing. Online forums, official documentation, and community resources can often provide valuable insights and troubleshooting tips.
+In general, when troubleshooting, carefully review any error messages or logs that are displayed during the installation process. Search for solutions specific to your Ubuntu version and the tools/packages you are installing. Online forums, official documentation, and community resources can often provide valuable insights and troubleshooting tips.
 Task verification:
   Verify that all the tools/packages have been successfully installed on Ubuntu DEVASC-LABVM.
   Test each installed tool/package to ensure they are functioning correctly.
