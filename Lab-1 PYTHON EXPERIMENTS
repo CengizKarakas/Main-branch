@@ -40,3 +40,18 @@ In general, when troubleshooting, carefully review any error messages or logs th
 Task verification:
   Verify that all the tools/packages have been successfully installed on Ubuntu DEVASC-LABVM.
   Test each installed tool/package to ensure they are functioning correctly.
+
+1.2 Run geopy and timedate Python Scipts on the DEVASC-LABVM using the tools above (1.1):
+Download the ScriptsFile or the scripts it contains to DEVASC-LABVM.
+To run the timedate.py, geopy-geocoders_location.py, and location.py scripts on the DEVASC-LABVM, follow these steps:
+Open a terminal on the DEVASC-LABVM.
+Navigate to the directory where you have saved the Python scripts. For example, if the scripts are located in the "ScriptsFile" folder, use the following command:
+  cd ScriptsFile
+Run the timedate.py script by executing the following command:
+  python3 timedate.py
+Run the geopy-geocoders_location.py script by executing the following command:
+  python3 geopy-geocoders_location.py
+Run the location.py script by executing the following command:
+  python3 location.py
+Ensure that you have the necessary dependencies installed for the scripts to run successfully. If any errors occur, carefully review the error messages and consider checking if the required libraries are installed or if any additional configurations are needed.
+Note: Make sure you have Python 3.8 and PIP installed on the DEVASC-LABVM as mentioned in the previous instructions. If not, please refer to the previous steps to install them.
