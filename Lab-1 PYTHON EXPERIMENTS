@@ -1,4 +1,5 @@
 1.1 Install different tools/packages on Ubuntu DEVASC-LABVM:
+
 Task preparation and implementation: 
 Python 3.8 and PIP Installation:
   Open a terminal and Run the following commands:
@@ -19,6 +20,7 @@ Jupyter Notebook Installation:
 Python IDLE Installation:
   Open a terminal and Run the following command:
   sudo apt install idle
+
 Task troubleshooting: 
 Python 3.8 and PIP:
   Ensure that you have an active internet connection.
@@ -37,11 +39,14 @@ Python IDLE:
   Verify if the idle package is available in the default repositories for your Ubuntu version.
   If the installation fails, check for any error messages and search for possible solutions online specific to your Ubuntu version.
 In general, when troubleshooting, carefully review any error messages or logs that are displayed during the installation process. Search for solutions specific to your Ubuntu version and the tools/packages you are installing. Online forums, official documentation, and community resources can often provide valuable insights and troubleshooting tips.
+
 Task verification:
   Verify that all the tools/packages have been successfully installed on Ubuntu DEVASC-LABVM.
   Test each installed tool/package to ensure they are functioning correctly.
 
 1.2 Run geopy and timedate Python Scipts on the DEVASC-LABVM using the tools above (1.1):
+
+Task preparation and implementation:
 Download the ScriptsFile or the scripts it contains to DEVASC-LABVM.
 To run the timedate.py, geopy-geocoders_location.py, and location.py scripts on the DEVASC-LABVM, follow these steps:
 Open a terminal on the DEVASC-LABVM.
@@ -55,3 +60,171 @@ Run the location.py script by executing the following command:
   python3 location.py
 Ensure that you have the necessary dependencies installed for the scripts to run successfully. If any errors occur, carefully review the error messages and consider checking if the required libraries are installed or if any additional configurations are needed.
 Note: Make sure you have Python 3.8 and PIP installed on the DEVASC-LABVM as mentioned in the previous instructions. If not, please refer to the previous steps to install them.
+
+Task troubleshooting:
+If you encounter any issues while running these scripts on the DEVASC-LABVM, here are some troubleshooting steps you can try:
+  Confirm that Python is installed on the DEVASC-LABVM by running python --version in the terminal. Ensure it is Python 3.10.
+  Verify that the necessary packages are installed. You can use pip list to check if geopy is installed. If not, install it using pip install geopy.
+  Make sure you are running the scripts with the correct command, such as python script_name.py.
+  Ensure that you are in the correct directory where the scripts are located. Use the cd command to navigate to the appropriate directory in the terminal.
+  Verify that the scripts have the correct file permissions. You can use ls -l to check the file permissions. If needed, use chmod +x script_name.py to grant execution permissions.
+  Review the script code for any syntax errors, missing modules, or incorrect usage of functions or methods.
+  Read any error messages or exceptions that are displayed when running the scripts. These messages can provide clues about the root cause of the issue.
+
+Task verification:
+Open a terminal or command prompt on the DEVASC-LABVM.
+Navigate to the directory where the Python scripts are located using the cd command. For example:
+  cd /ScriptsFile
+Run the scripts using the Python interpreter. 
+  python3 timedate.py
+  python3 geopy-geocoders_location.py
+  python3 location.py
+
+The error message for example "ModuleNotFoundError: No module named 'folium'" indicates that the 'folium' module is not installed in your Python environment. To resolve this issue:
+Open a terminal or command prompt on your system.
+Install the 'folium' module using pip by running the following command:
+  pip install folium
+Observe the output or any error messages displayed in the terminal. Ensure that the scripts execute without any errors or exceptions.
+Verify that the expected results are obtained from the execution of each script. 
+
+1.3 Install different tools/packages on Windows OS (deep dive exercise) ++
+  Python 3.8 and PIP
+  Visual Studio Code
+  Jupyter Notebook
+  Python IDLE
+
+Python 3.8 and PIP:
+  Visit the official Python website at https://www.python.org/downloads/windows/ and download the Python 3.8 installer for Windows.
+  Run the downloaded installer and follow the on-screen instructions. Make sure to select the option to install PIP during the installation process.
+  Once the installation is complete, you should have Python 3.8 and PIP installed on your Windows system.
+Visual Studio Code:
+  Visit the official Visual Studio Code website at https://code.visualstudio.com/Download and download the Visual Studio Code installer for Windows.
+  Run the downloaded installer and follow the on-screen instructions to install Visual Studio Code on your Windows system.
+  Once the installation is complete, you should have Visual Studio Code installed and ready to use.
+Jupyter Notebook:
+  Open a command prompt or PowerShell window on your Windows system.
+  Run the following command to install Jupyter Notebook using PIP:
+    pip install jupyter
+Python IDLE:
+  Python IDLE is usually included in the standard Python installation package. If you have installed Python 3.8 as mentioned in step 1, Python IDLE should already be available on your Windows system.
+  
+Task troubleshooting:
+Python 3.8 and PIP:
+  Make sure you have downloaded the correct version of Python 3.8 for your Windows OS (32-bit or 64-bit).
+  During the installation, ensure that the option to add Python to the system PATH is selected.
+  If the installation fails, try running the installer as an administrator.
+Visual Studio Code:
+  Verify that you have downloaded the appropriate Visual Studio Code installer for your Windows OS (32-bit or 64-bit).
+  Run the installer as an administrator to ensure proper installation.
+Jupyter Notebook:
+  Ensure that Python and PIP are successfully installed on your system (refer to step 1 above).
+Python IDLE:
+  Python IDLE is typically installed by default with the Python package. If it is not installed, try reinstalling Python and ensure that the IDLE option is selected during the installation process.
+  If the installation fails or Python IDLE is still not available, search for alternative ways to install Python IDLE specifically for your Windows version.
+  
+Task verification: 
+
+Python 3.8 and PIP:
+Open the Command Prompt or PowerShell on your Windows OS.
+To verify Python installation
+  python --version
+To verify PIP installation, run the following command:
+  pip --version
+
+Visual Studio Code:
+  Launch Visual Studio Code from the Start menu or desktop shortcut.
+  Ensure that the Visual Studio Code interface opens without any issues.
+  You can create a new file, write some code, and save it to verify the functionality.
+
+Jupyter Notebook:
+Open the Command Prompt or Anaconda Prompt on your Windows OS.
+Run the following command to start Jupyter Notebook:
+  jupyter notebook
+It should open a browser window displaying the Jupyter Notebook interface.
+Create a new notebook and execute some code cells to verify its functionality.
+
+Python IDLE:
+Open the Command Prompt or PowerShell on your Windows OS.
+Run the following command to launch Python IDLE:
+  python -m idlelib.idle
+It should open the Python IDLE interface without any issues.
+You can write and execute Python code in the IDLE editor to verify its functionality.
+
+1.4 Install different tools/packages on Ubuntu 22.04.01 LTS (deep dive exercise) 
+  Python 3.8 and PIP
+  Visual Studio Code
+  Jupyter Notebook
+  Python IDLE
+  
+Python 3.8 and PIP:
+
+Python 3.8 is already available in the default Ubuntu 20.04 repositories. Open a terminal and run the following commands:
+  sudo apt update
+  sudo apt install python3.8 python3-pip
+
+Visual Studio Code:
+Run the following commands in a terminal:
+  sudo apt update
+  sudo apt install software-properties-common apt-transport-https 
+  wget
+  wget -q https://packages.microsoft.com/keys/microsoft.asc -O- | 
+  sudo apt-key add -
+  sudo add-apt-repository "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main"
+  sudo apt update
+  sudo apt install code
+
+Jupyter Notebook:
+Open a terminal and run the following commands:
+  sudo apt update
+  sudo apt install python3-pip
+  python3 -m pip install jupyter
+
+Python IDLE:
+Python IDLE should already be installed by default with the Python package. If not, run the following command in a terminal:
+  sudo apt update
+  sudo apt install idle-python3.8    
+
+Task troubleshooting:
+Python 3.8 and PIP:
+Run the following commands in a terminal:
+  sudo apt update
+  sudo apt install python3.8 python3-pip
+If the installation fails, check for any error messages and try the following command to resolve dependencies:
+  sudo apt --fix-broken install
+
+Visual Studio Code:
+Run the following commands in a terminal:
+  sudo apt update
+  sudo apt install code
+
+Jupyter Notebook:
+Ensure that you have Python 3.8 and PIP installed correctly.
+Run the following command to install Jupyter Notebook:
+  sudo pip3 install jupyter
+
+Python IDLE:
+Run the following command to install Python IDLE:
+  sudo apt install idle-python3.8
+  
+Task verification:
+Python 3.8 and PIP:
+Open a terminal on your Ubuntu system.
+  python3 --version
+It should display the Python version as 3.8.11. If not, ensure that Python 3.8 is installed correctly.
+To verify PIP installation, run the following command:
+  pip3 --version
+
+Visual Studio Code:
+Open a terminal on your Ubuntu system.
+Run the following command to launch Visual Studio Code:
+  code
+
+Jupyter Notebook:
+Open a terminal on your Ubuntu system.
+Run the following command to start Jupyter Notebook:
+  jupyter notebook
+
+Python IDLE:
+Open a terminal on your Ubuntu system.
+Run the following command to launch Python IDLE:
+  idle3
