@@ -109,8 +109,47 @@ Task verification:
 Part 2: Create a Python Unit Test
 Lab netacad: Cisco DEVNET 3.5.7
 Task preparation and implementation:
+All of the command line options for unittest
+  devasc@labvm:~/labs/devnet-src$ python3 -m unittest -h
+Review the test_data.py file.
+  devasc@labvm:~/labs/devnet-src$ more unittest/test_data.py 
+  Something is niet correct and we have to find it.
+Create the json_search() function that you will be testing.
+  devasc@labvm:~/labs/devnet-src/unittest$ python3 recursive_json_search.py 
+  Python script is in LAB 5 ScriptsFile.
+  devasc@labvm:~/labs/devnet-src/unittest$ python3 test_json_search.py 
+   []
+  .F.  # Run the test script in its current state to see what results it currently returns. First, you see the empty list. Second, you see the .F. highlighted in the output. A period (.) means a test passed and an F means a test failed.
+  devasc@labvm:~/labs/devnet-src/unittest$ python3 -m unittest -v test_json_search
+Investigate and correct the first error in the recursive_json_search.py script.
+  Move the ret_val=[ ] out of our function in recursive_json_search.py so that the iteration does not overwrite the accumulated list each time.
+      def json_search(key,input_object):
+        ret_val=[]
+  Move the ret_val=[ ] out of our function in recursive_json_search.py so that the iteration does not overwrite the accumulated list each time.
+      ret_val=[]
+      def json_search(key,input_object):
+  devasc@labvm:~/labs/devnet-src/unittest$ python3 recursive_json_search.py  
+Run the test again to see if all errors in the script are now fixed.
+  Open the test_data.py file and search for issueSummary
+  if you search for the value of key2, which is XY&^$#*@!1234%^&, you will only find it at the top where it is defined because it is not in the data JSON object.
+Investigate and correct the second error in the recursive_json_search.py script.  
+  To resolve this issue, wrap the json_search() function with an outer function. Delete your existing json_search() function and replace with the code in LAB 5 ScriptsFile
+  if you search for the value of key2, which is XY&^$#*@!1234%^&, you will only find it at the top where it is defined because it is not in the data JSON object.
+  devasc@labvm:~/labs/devnet-src/unittest$ python3 -m unittest
+  ...
+
 Task troubleshooting:
+  Move the ret_val=[ ] out of our function in recursive_json_search.py so that the iteration does not overwrite the accumulated list each time.
+      def json_search(key,input_object):
+        ret_val=[]
+  Move the ret_val=[ ] out of our function in recursive_json_search.py so that the iteration does not overwrite the accumulated list each time.
+      ret_val=[]
+      def json_search(key,input_object):
+  Run the test again to see if all errors in the script are now fixed.
+  Open the test_data.py file and search for issueSummary
+
 Task verification:
+  Check out the LAB-5 Foto's
 
 Part 3: Parse Different Data Types with Python
 Lab netacad: cisco DEVNET 3.6.6
