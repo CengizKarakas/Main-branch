@@ -94,10 +94,33 @@ Task verification:
 
 
 Part 2: Explore Python Development Tools
+
 Lab netacad: Cisco DEVNET 3.1.12
 Task preparation and implementation:
+Enter the following command to use the venv tool to create a Python 3 virtual environment with the name devfun.
+    devasc@labvm:~/labs/devnet-src/python$ python3 -m venv devfun
+Activate and test the Python 3 virtual environment.
+    devasc@labvm:~/labs/devnet-src/python$ source devfun/bin/activate
+    (devfun) devasc@labvm:~/labs/devnet-src/python$ pip3 freeze
+    (devfun) devasc@labvm:~/labs/devnet-src/python$ pip3 install requests
+    (devfun) devasc@labvm:~/labs/devnet-src/python$ deactivate
+Check the current packages installed in the system environment.
+    devasc@labvm:~/labs/devnet-src/python$ python3 -m pip freeze
+Sharing Your Virtual Environment 
+    You can use all the dependencies listed so that other people who want to work on the same project as you can get the same environment as yours.
+    devasc@labvm:~/labs/devnet-src/python$ source devfun/bin/activate
+Send the output of the pip3 freeze command to a text file called requirements.txt.
+    (devfun) devasc@labvm:~/labs/devnet-src/python$ pip3 freeze > requirements.txt
+Create and activate a new Python virtual environment called devnew.
+    devasc@labvm:~/labs/devnet-src/python$ python3 -m venv devnew
+    devasc@labvm:~/labs/devnet-src/python$ source devnew/bin/activate
+Use the pip3 install -r requirements.txt command to install the same packages that are installed in the devfun virtual environment.
+    (devnew) devasc@labvm:~/labs/devnet-src/python$ pip3 install -r requirements.txt
+
 Task troubleshooting:
+  -
 Task verification:
+  Check out LAB-3 Foto's
 
 Part 3: Explore Python Classes
 Lab netacad: cisco DEVNET 3.4.6
