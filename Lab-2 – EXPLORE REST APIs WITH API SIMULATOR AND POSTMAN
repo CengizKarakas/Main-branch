@@ -1,1 +1,53 @@
+Part 1: Explore API Documentation Using the API Simulator
+
+Task preparation and implementation:
+
+Go to the Chromium Web Browser and in the address bar type: library.demo.local .
+Click here for API docs, click here to go to the API documentation web page.
+
+GET /books API> Try it out> Execute 
+In the Responses section you will see: Curl/Request URL/Code/Response body/Response headers
+In the Response body you will see a list of books in JSON format.
+Use the curl command in a terminal window.
+The GET /books 
+Copy the curl command, Paste the contents into the terminal.
+List books with their ISBN using the GET /books API. In the Parameters section, the includeISBN parameter select TRUE > Execute.
+Curl now includes the parameter for ISBN. Response body has the same list of books as shown previously but now includes the book’s ISBN.
+
+Get a token using the POST /loginViaBasic API.
+Click the API POST /loginViaBasic > Try it out > Execute.
+A Sign in box will prompt you for a username and password. Enter the following information and click Sign in:
+• Username: cisco
+• Password: Cisco123!
+The token will be displayed in the Response body. Select the information between the quotes
+Click the Authorize button. The Available authorizations dialogue box will appear.
+Paste the token after Value and click Authorize. Notice the Name is X-API-KEY. 
+
+Add books using the POST /books API.
+Click the API POST /books > Click Try it out. > Modify the id, title and author and Click Execute.
+A Code of 200 means the post was a success. You should see the book you added in the Response body along with a new id. 
+
+List books using the GET /books API.
+Click the GET /books > Try it out > Execute.
+Under Server response in the Response body, you will now see new book you added. 
+
+List a specific book using the GET /books{id} API.
+Click the GET /books{id} > Try it out >  Parameters, enter 4 for the required id.> Click Execute. Notice the information provided by Curl and Request URL.
+
+Delete a specific book using the DELETE /books{id} API.
+Click the DELETE /books{id} > Try it out> Parameters, enter 4.> Execute.
+Verify that the delete was successful in the Server response. 
+
+List books using the GET /books API.
+Click the GET /books> Try it out>Execute.
+Under Server response in the Response body, you will no longer see the book with id or 4.
+
+Task troubleshooting:
+
+Add books using the POST /books API
+If you got a 401 code, check the Response body text. Most likely you received an “error”: “Invalid API key” response. This is because you did not enter all the characters for your API key. Or possibly, you add an unnecessary space.
+You can verify the books were added to the Our Books Return to the School Library tab in your browser (http://library.demo.local) and refresh the page. Be careful not to close the School Library API tab. If you do, then you will need to reauthenticate.
+
+Task verification:
+Check out the screenshots in Lab-2
 
