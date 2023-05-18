@@ -49,5 +49,76 @@ If you got a 401 code, check the Response body text. Most likely you received an
 You can verify the books were added to the Our Books Return to the School Library tab in your browser (http://library.demo.local) and refresh the page. Be careful not to close the School Library API tab. If you do, then you will need to reauthenticate.
 
 Task verification:
-Check out the screenshots in Lab-2
+Check out the screenshots in LAB-2 Foto's
 
+Part 2: Use Postman to Make API Calls to the API Simulator
+
+Task preparation and implementation:
+Click the Postman
+List the books using the GET /books API.
+Click the plus icon “+” to create an Untitled Request. By default, this will be a GET
+Click the down arrow next to GET to view the different API operations including GET, POST, and DELETE. 
+Return to the School Library API > Under Request URL, Copy the URL http://library.demo.local/api/v1/books
+Return to Postman and paste the URL next to GET where it states, “Enter request URL”. > Click Send. 
+To verify that the API request was a success, you will now see a response that include the Status code 200 OK in green. Scroll down to the Body section to see the response. Notice that the default is Pretty and json.
+
+Get a Token using the POST /loginViaBasic API.
+Click the plus icon “+” to create a new Untitled Request. > Click the down arrow next to GET and select POST.
+Return to the School Library API > POST /loginViaBasic API >  Under Request URL, Copy the URL: http://library.demo.local/api/v1/loginViaBasic
+Return to Postman and paste the URL next to POST where it states, “Enter request URL”. > Click Authorization > Choose Basic Auth.
+For the Username and Password fields, fill in the following:
+Username: cisco
+Password: Cisco123!
+ Click Send.
+
+Add a book using the POST /books API.
+Click the plus icon “+” to create an Untitled Request > select POST. >
+Return to the School Library API >  POST /books > Under Request URL, Copy the URL : http://library.demo.local/api/v1/books
+Return to Postman > paste the URL next to POST >  Click Authorization > In the drop-down list for Type, choose API Key > In the Key field, enter X-API-KEY > Click Send.
+
+Verify the additional book with the Get /books API.
+Return to the first GET tab > Click Send.
+
+Use additional parameters with the Get /books API.
+Go to the School Library API > GET /books API > Click Try it out > Click includeISBN and select true > Click sortBy and select author > Click Execute.
+Return to Postman and go to the first API tab, GET http://library.demo.local/api/v1/books. You will now include some of the parameters from the School Library API web site.
+
+Click Params. You will see under Query Params input boxes for KEY and VALUE. Enter the following information:
+Under KEY, enter includeISBN and under Value enter true
+Under KEY, enter sortBy and under Value enter author
+Click Send.
+
+Task troubleshooting:
+If the Request URL is no longer showing, then you probably closed and re-opened the School Library API documentation page and are no longer authenticated. Click Try it out, then Execute, and then re-authenticate with username cisco and password Cisco123!.
+
+Task verification:
+To verify that the API request was a success, you will now see a response that include the Status code 200 OK in green.
+Check out the screenshots in LAB-2 Foto’s
+
+
+Part 3: Use Python to Add 100 Books to the API Simulator
+
+Task preparation and implementation:
+Open Visual Studio (VS) Code and navigate to the school-library directory.
+Open VS Code > Click File > Open Folder…, navigate to the labs/devnet-src/school-library folder, and click OK.
+
+Investigate the libraries used by add100RandomBooks.py program.
+Open a terminal window and start Python 3 > 
+>>> from faker import Faker
+>>> fake = Faker()
+>>> fake.name()
+Practice generating random data using the faker library.
+
+Enter the following to generate a fake name. 
+>>> print('My name is {}.'.format(fake.name()))
+My name is Katherine Ross.
+>>> print('My name is {} and I wrote "{}" (ISBN {}).'.format(fake.name(),fake.catch_phrase(),fake.isbn13()))
+My name is Gary Castaneda and I wrote "Organic incremental neural-net" (ISBN 978-0-669-01935-3).
+>>> for i in range(10):
+...     print(fake.name())
+>>> quit()
+
+Task troubleshooting:
+-
+Task verification
+Check out the screenshots in LAB-2 Foto’s
