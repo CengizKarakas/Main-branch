@@ -124,6 +124,25 @@ Task verification:
 
 Part 3: Explore Python Classes
 Lab netacad: cisco DEVNET 3.4.6
+
 Task preparation and implementation:
+What is a function?
+  Recall that a function is an independently defined block of code that is called by name.
+What is a method?
+  A method, however, cannot be called by itself. It is dependent on the object in which it is defined.
+Define and then instantiate a class with the __init__() method.
+  A Python class is used to create objects that have properties and methods. All Python classes typically include an explicitly defined __init__() function, although you can create a class without defining one. The __init__() function is always initiated when a class is instantiated.
+  Define the __init__() function. By convention, the first parameter is called self. The self parameter is a reference to the current instance of the class itself and is used to access variables that belong to the entire class.
+    def __init__(self, name, country):
+        self.name = name
+        self.country = country
+      loc = Location("Your_Name", "Your_Country")
 Task troubleshooting:
+  Spaces are important, otherwise the script will throw an error.
+
 Task verification:
+  Check out LAB-3 Foto's anf LAB-3 ScriptsFile
+  
+  
+  
+  
