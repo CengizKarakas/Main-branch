@@ -1,0 +1,106 @@
+Part 1: Python Programming Review
+Lab netacad: Cisco DEVNET 1.3.3
+Task preparation and implementation:
+Review different Boolean operators.
+  >	Greater than
+  <	Less than
+  ==	Equal to
+  !=	Not equal to
+  >=	Greater than or equal to
+  <=	Less than or equal to
+You may want to display a float to a specific number of decimal places instead of the full number. To do this, you can use f-strings and the "{:.2f}".format function.
+    >>> num = 22/7
+    >>> f"The value of num is {num}"
+    'The value of num is 3.142857142857143'
+    >>> pi = "{:.2f}".format(num)
+    >>> f"The value of pi is {pi}."
+    'The value of pi is 3.14.'
+How to create a list variable:
+    >>> hostnames=["R1","R2","R3","S1","S2"]
+    >>> type(hostnames)
+    <class 'list'>
+    >>> len(hostnames)
+    5
+    >>> hostnames
+    ['R1', 'R2', 'R3', 'S1', 'S2']
+Using index for list
+    >>> hostnames[0]
+    'R1'
+    >>> hostnames[-1]
+    'S2'
+    >>> hostnames[0]="RTR1"
+    >>> hostnames
+    ['RTR1', 'R2', 'R3', 'S1', 'S2']
+    >>> del hostnames[3]
+    >>> hostnames
+    ['RTR1', 'R2', 'R3', 'S2']
+Create and manipulate a dictionary. Dictionaries are unordered lists of objects. Each object contains a key/value pair. Create a dictionary using the braces { }.
+    >>> ipAddress={"R1":"10.1.1.1","R2":"10.2.2.1","R3":"10.3.3.1"}
+    >>> type(ipAddress)
+    <class 'dict'>
+    >>> ipAddress["S1"]="10.1.1.10"
+    >>> ipAddress
+    {'R1': '10.1.1.1', 'R2': '10.2.2.1', 'R3': '10.3.3.1', 'S1': '10.1.1.10'}
+    >>> ipAddress["R3"]=["10.3.3.1","10.3.3.2","10.3.3.3"]
+    >>> ipAddress
+    {'S1': '10.1.1.10', 'R2': '10.2.2.1', 'R1': '10.1.1.1', 'R3': ['10.3.3.1', '10.3.3.2', '10.3.3.3']}
+Create a variable to store user input and then display the value.
+  Assign the input() function to a variable that asks the user for input and then print the value of the user’s input.
+  Check out personal-info.py in LAB-3 ScriptsFile
+Create an if/else function.  
+  Check out if-vlan.py in LAB-3 ScriptsFile
+Create an if/elif/else function.
+  Check out if-acl.py in LAB-3 ScriptsFile
+Create a for loop.
+The Python for function is used to loop or iterate through the elements in a list or perform an operation on a series of values.
+  >>> devices=["R1","R2","R3"]
+  >>> for item in devices:
+  ... print(item)
+  ... 
+  R1
+  R2
+  R3
+An if statement can be embedded in a for loop to achieve this.
+  >>> for item in devices:
+  ... if "R" in item:
+  ... print(item)
+  ... 
+  R1
+  R2
+  R3
+You can also use a combination of the for loop and if statement to create a new list. Enter the following example to see how to use the append() method to create a new list called switches.
+  >>> switches=[]
+  >>> for item in devices:
+  ... if "S" in item:
+  ... switches.append(item)
+  ... 
+  >>> switches
+  ['S1', 'S2']
+While Loop en Use a while loop to check for a user quit command.
+  Check out while-loop.py, while-loop2.py and while-loop3.py in LAB-3 ScriptsFile
+Create a program that reads an external file and Remove the blank lines from the output and Copy the content of a file into a list variable.
+  The open() function can be used to access a file using the following syntax:  open(name, [mode])
+  Check out the devices.txt, file-access.py, file-access2.py and file-access3.py in LAB-3 ScriptsFile
+Create a script to allow the user to add devices
+  Check out file-access-input.py in LAB-3 ScriptsFile
+  
+Task troubleshooting:
+In Python, use four spaces to indent. If you save your file in VS Code, this four space indention will be automatic. When beginning the else statement, make sure to backspace to the left margin.
+Be sure you enter four (4) spaces to indent the print() function and press the Enter key twice to exit the for loop.
+Be sure you enter four (4) spaces to indent the if function and the eight (8) spaces to indent the print() function. Press the Enter key twice to exit and execute the for loop.
+
+Task verification:
+  Check out LAB-3 Foto's
+
+
+Part 2: Explore Python Development Tools
+Lab netacad: Cisco DEVNET 3.1.12
+Task preparation and implementation:
+Task troubleshooting:
+Task verification:
+
+Part 3: Explore Python Classes
+Lab netacad: cisco DEVNET 3.4.6
+Task preparation and implementation:
+Task troubleshooting:
+Task verification:
