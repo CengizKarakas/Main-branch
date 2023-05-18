@@ -1,9 +1,111 @@
 Part 1: Software Version Control with Git
 Lab netacad: Cisco DEVNET 3.3.11
 Task preparation and implementation:
-Task troubleshooting:
-Task verification:
+Initialize a Git Repository
+  devasc@labvm:~$ git config --global user.name "CengizKarakas"
+  devasc@labvm:~$ git config --global user.email cengiz.karakas@student.pxl.be
+  git config --list
+  devasc@labvm:~/labs/devnet-src$ mkdir git-intro
+  devasc@labvm:~/labs/devnet-src/git-intro$ git init
+Staging and Committing a File in the Repository  
+  devasc@labvm:~/labs/devnet-src/git-intro$ echo "I am on my way to passing the Cisco DEVASC exam" > DEVASC.txt
+Staging the File 
+  devasc@labvm:~/labs/devnet-src/git-intro$ git add DEVASC.txt
+Committing a File
+  devasc@labvm:~/labs/devnet-src/git-intro$ git commit -m "Committing DEVASC.txt to begin tracking changes"
+Viewing the Commit History.
+  devasc@labvm:~/labs/devnet-src/git-intro$ git log
+Modifying the File and Tracking the Changes
+  devasc@labvm:~/labs/devnet-src/git-intro$ echo "I am beginning to understand Git!" >> DEVASC.txt
+Verify the change to the repository.
+  devasc@labvm:~/labs/devnet-src/git-intro$ git status
+Stage the modified file.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git add DEVASC.txt
+Commit the staged file. 
+  devasc@labvm:~/labs/devnet-src/git-intro$ git commit -m "Added additional line to file"
+Verify the changes in the repository.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git diff b5d0f8e 4f5c4c5  #You will need to use your commit IDs
 
+Create a new branch 
+  devasc@labvm:~/labs/devnet-src/git-intro$ git branch feature
+Checkout the new branch  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git checkout feature
+Verify current branch  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git branch
+Stage the modified file in the feature branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git add DEVASC.txt
+Commit the staged file in the feature branch
+  devasc@labvm:~/labs/devnet-src/git-intro$ git commit -m "Added a third line in feature branch"
+Checkout the master branch. 
+  devasc@labvm:~/labs/devnet-src/git-intro$ git checkout master
+Merge file contents from feature to master branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git merge feature
+Deleting a branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git branch
+  devasc@labvm:~/labs/devnet-src/git-intro$ git branch -d feature
+  devasc@labvm:~/labs/devnet-src/git-intro$ git branch
+Modify the contents of DEVASC.txt in the test branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ sed -i 's/Cisco/NetAcad/' DEVASC.txt
+Stage and commit the test branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git commit -a -m "Change Cisco to NetAcad"
+Checkout the master branch.  
+  devasc@labvm:~/labs/devnet-src/git-intro$ git checkout master
+Modify the contents of DEVASC.txt in the master branch.
+  devasc@labvm:~/labs/devnet-src/git-intro$ sed -i 's/Cisco/DevNet/' DEVASC.txt
+Attempt to merge the test branch into the master branch.
+  devasc@labvm:~/labs/devnet-src/git-intro$ git merge test
+Find the conflict
+  cat DEVASC.txt
+Manually edit the DEVASC.txt file to remove the conflicting text.
+  devasc@labvm:~/labs/devnet-src/git-intro$ vim DEVASC.txt
+  Press dd (delete) the irrelevant lines
+  Save your changes in vim by pressing ESC (the escape key) and then typing : (colon) followed by wq and press enter.
+Stage and commit the master branch.
+  devasc@labvm:~/labs/devnet-src/git-intro$ git add DEVASC.txt
+  devasc@labvm:~/labs/devnet-src/git-intro$ git commit -a -m "Manually merged from test branch"
+
+Integrating Git with GitHub
+Create a Repository.  
+  Select the “New repository” button or click on the “+” icon in the upper right corner and select “New repository
+  Repository name: devasc-study-team
+  Description: Working together to pass the DEVASC exam
+  Public/Private: Private
+Select: Create repository
+Create a new directory devasc-study-team
+  devasc@labvm:~/labs/devnet-src/git-intro$ mkdir devasc-study-team
+Copy the DEVASC file.
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ cp ../DEVASC.txt .
+Initialize a new Git repository
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git init
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git config --list
+  devasc@labvm:~$ git config --global user.name "CengizKarakas"
+  devasc@labvm:~$ git config --global user.email cengiz.karakas@student.pxl.be
+Point Git repository to GitHub repository.
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git remote add origin https://github.com/CengizKarakas/devasc-study-team.git
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git remote --verbose
+Stage and Commit the DEVASC.txt file.  
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git add DEVASC.txt
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git commit -m "Add DEVASC.txt file to devasc-study-team"
+Send (push) the file from Git to GitHub  
+  devasc@labvm:~/labs/devnet-src/git-intro/devasc-study-team$ git push origin master
+  Username for 'https://github.com': CengizKarakas
+  Password for 'https://CengizKarakas@github.com': XXXXXXXX
+Verify file on GitHub.
+  Go to your GitHub account and under “Repositories” select username/devasc-study-team.
+  You should see that the DEVASC.txt file has been added to this GitHub repository. Click on the file to view the contents.
+
+Task troubleshooting:
+  If, after entering your username and password, you get a fatal error stating repository is not found, you most likely submitted an incorrect URL. You will need to reverse your git add command with the git remote rm origin command.
+  Your email address on Github must match. You can see your e-mail address in the profile settings on Github. Type "git config --list" in Terminal and check the information.
+Task verification:
+  You can use the following commands for verification.
+  git status
+  git log
+  git config --list
+  cat
+  git branch
+  git diff b510f8e 9f5c4c5 #You will need to use your commit IDs
+  
 Part 2: Create a Python Unit Test
 Lab netacad: Cisco DEVNET 3.5.7
 Task preparation and implementation:
