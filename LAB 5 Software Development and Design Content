@@ -153,6 +153,30 @@ Task verification:
 
 Part 3: Parse Different Data Types with Python
 Lab netacad: cisco DEVNET 3.6.6
+
 Task preparation and implementation:
+Parse XML in Python
+Build a script to parse the XML data.
+  Import the ElementTree module of the xml library and the regular expression engine. The ElementTree module will be used to do the parsing. The regular expression engine will be used to search for specific data.
+  Use the parse function from ET (ElementTree) to parse the myfile.xml file and assign it to a variable (xml). Then, get the root element with the getroot function and assign it to a variable (root).
+  The goal is to extract the contents of the XML root content within the <rpc> tag and then further drill down to find the values of the <edit-config>, <default-operation>, and <test-option> elements. Regular expressions are used to perform these searches and retrieve the desired information.
+  Check out the LAB-5 ScriptsFile and the LAB-5 Foto's.
+Parse JSON in Python
+  The Python yaml library can be used to convert the data to YAML.
+  Open the parsejson.py file found in the ~/labs/devnet-src/parsing directory.
+  Import the json and yaml libraries.
+  Use the Python with statement to open json and set it to the variable name json_file. Then use the json.load method to load the JSON file into a string set to the variable name ourjson.
+  devasc@labvm:~/labs/devnet-src/parsing$ python3 parsejson.py 
+Parse YAML in Python
+  Open the parseyaml.py file found in the ~/labs/devnet-src/parsing directory.
+  Import the json and yaml libraries.
+  Use the Python with statement to open yaml and set it to the variable name yaml_file. Then use the yaml.safe_load method to load the YAML file into a string set to the variable name ouryaml.
+  devasc@labvm:~/labs/devnet-src/parsing$ python3 parseyaml.py 
+Output the parsed YAML data in a JSON data format.
+  Add a print statement to add two blank lines after the previous output. Then add a statement to print ouryaml as JSON data by using the dumps() method of the json library. Add the indent parameter to prettify the JSON data.
+  devasc@labvm:~/labs/devnet-src/parsing$ python3 parseyaml.py
+
 Task troubleshooting:
+  -
 Task verification:
+  Check out the LAB-5 ScriptsFile and the LAB-5 Foto's.
