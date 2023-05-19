@@ -1,1 +1,38 @@
+Network Infrastructure
 
+Task preparation and implementation:
+Check out LAB 4 Network Infrastructure and LAB 4 Network Plan
+Switch Configuration;
+ erase startup-config
+ reload
+ Iot the switch confirugation use LAB-RA08-A-SW03 Configuration file
+ Iot the router confirugation use LAB-RA08-C-R03 Configuration file
+Restore/ LAB-RA08-C-R03 :
+  Interface gig0/1
+  Ip address 10.199.66.108 255.255.255.224
+  No shut
+  Exit
+  Ip default gateway 10.199.66.100
+  Ip route 0.0.0.0 0.0.0.0 10.199.66.100
+  Copy tftp running config
+  10.199.64.134
+  lab-ra08-c-r03-confg
+Restore/LAB-RA08-A-SW03 :
+  Interface vlan 10
+  Ip address 172.16.8.7 255.255.255.240
+  Interface gig0/1
+  Switchport mode trunk
+  Switchport trunk allowed vlan 10
+  No shut
+  Copy tftp running config
+  10.199.64.134
+  lab-ra08-a-sw03-confg
+
+Task troubleshooting:
+  LAB-RA08-C-R03:
+  tftp source-interface GigabitEthernet0/0.10: is used on Cisco network devices to specify the source interface to be used for TFTP file transfer (Trivial File Transfer Protocol).
+  encapsulation dot1Q 10: is used to configure a subinterface on a Cisco network device with IEEE 802.1Q VLAN encapsulation and associate it with VLAN 10. It is typically used on a router or switch to enable communication between VLANs through a trunk link.
+  standby 10 ip 172.16.8.1: is used to configure a virtual IP address for a Cisco HSRP (Hot Standby Router Protocol) group 10. 
+  outer-id 10.199.66.108: is used in the configuration of the OSPF routing protocol on Cisco network devices to manually specify the OSPF router ID.
+  
+Task verification:
