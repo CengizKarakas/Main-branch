@@ -1,15 +1,15 @@
 Network Infrastructure
 
 Task preparation and implementation:
-Check out LAB 4 Network Infrastructure and LAB 4 Network Plan
+Check out LAB 4 Network Infrastructure and LAB 4 Network Plan in LAB-4 Documents
 Switch (LAB-RA08-A-SW03) Configuration;
  erase startup-config
  reload
- Iot the router confirugation use LAB-RA08-C-R03 Configuration file
+ Iot the router confirugation use LAB-RA08-C-R03 Configuration file in LAB-4 Documents
 Router (LAB-RA08-C-R03) Configuration;
  erase startup-config
  reload
- Iot the router confirugation use LAB-RA08-C-R03 Configuration file
+ Iot the router confirugation use LAB-RA08-C-R03 Configuration file in LAB-4 Documents
 Restore/ LAB-RA08-C-R03 :
   Interface gig0/1
   Ip address 10.199.66.108 255.255.255.224
