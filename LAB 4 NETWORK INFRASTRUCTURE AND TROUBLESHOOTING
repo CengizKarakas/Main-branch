@@ -2,10 +2,13 @@ Network Infrastructure
 
 Task preparation and implementation:
 Check out LAB 4 Network Infrastructure and LAB 4 Network Plan
-Switch Configuration;
+Switch (LAB-RA08-A-SW03) Configuration;
  erase startup-config
  reload
- Iot the switch confirugation use LAB-RA08-A-SW03 Configuration file
+ Iot the router confirugation use LAB-RA08-C-R03 Configuration file
+Router (LAB-RA08-C-R03) Configuration;
+ erase startup-config
+ reload
  Iot the router confirugation use LAB-RA08-C-R03 Configuration file
 Restore/ LAB-RA08-C-R03 :
   Interface gig0/1
@@ -33,6 +36,14 @@ Task troubleshooting:
   tftp source-interface GigabitEthernet0/0.10: is used on Cisco network devices to specify the source interface to be used for TFTP file transfer (Trivial File Transfer Protocol).
   encapsulation dot1Q 10: is used to configure a subinterface on a Cisco network device with IEEE 802.1Q VLAN encapsulation and associate it with VLAN 10. It is typically used on a router or switch to enable communication between VLANs through a trunk link.
   standby 10 ip 172.16.8.1: is used to configure a virtual IP address for a Cisco HSRP (Hot Standby Router Protocol) group 10. 
-  outer-id 10.199.66.108: is used in the configuration of the OSPF routing protocol on Cisco network devices to manually specify the OSPF router ID.
+  router-id 10.199.66.108: is used in the configuration of the OSPF routing protocol on Cisco network devices to manually specify the OSPF router ID.
+  network 10.199.66.96 0.0.0.31 area 0: is used in the configuration of the OSPF routing protocol on Cisco network devices to advertise the networks to be included in the OSPF routing process.
   
 Task verification:
+  TFTP source-interface: Verify that the file transfer is successful between the network devices.
+  Interface configuration: Verify the configuration by checking the interface status, VLAN association, and connectivity.
+  Encapsulation dot1Q: Verify that VLAN communication is established between different VLANs using the trunk link connected to the router or switch.
+  Standby virtual IP: Verify that the routers are functioning as a single virtual router by checking the HSRP status and connectivity to hosts on the LAN.
+  OSPF and Router ID configuration: Check OSPF routing table and routing updates to ensure the exchange of routing information.
+  
+  
