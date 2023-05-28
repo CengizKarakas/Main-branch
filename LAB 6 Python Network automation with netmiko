@@ -1,1 +1,47 @@
+Part 1: Connecting to a single iOS device
 
+Task preparation and implementation:
+Sending single show command:
+  print("Connecting via SSH => show interface status (brief)")
+  from netmiko import ConnectHandler
+  sshCli = ConnectHandler(
+    device_type="cisco_ios",
+    host=" 10.125.100.187",
+    port="22",
+    username="admin",
+    password="pxl"
+    )
+output=sshCli.send_command("show ip interface brief")
+print(output)
+
+Sending multiple show commands:
+  print("Connecting via SSH => show interface status (brief)")
+  from netmiko import ConnectHandler
+  sshCli = ConnectHandler(
+    device_type="cisco_ios",
+    host="10.125.100.187",
+    port="22",
+    username="admin",
+    password="pxl",
+    secret="cisco",
+    )
+    output1=sshCli.send_command("show ip interface brief")
+    output2=sshCli.send_command("show version")
+    print(output1 + "\n\n" + output2)
+
+Send multiple configuration commands to a single device
+  cisco_Switch = {
+    "device_type": "cisco_ios",
+    "host": "10.125.100.187,
+    "username": "admin",
+    "password": "pxl",
+    "secret": "cisco"}
+  with ConnectHandler(**cisco_Switch) as net_connect: 
+    net_connect.enable()
+    output - net_connect.send_config_from_file('iosv_l3_config.txt')
+    print (output)
+    net_connect.disconnect() # if u want to disconnect, use this command.
+
+
+Task troubleshooting:
+Task verification:
