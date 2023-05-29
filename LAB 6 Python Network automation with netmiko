@@ -45,5 +45,35 @@ In the script included in LAB-6 ScriptsFile_Part 4, the network engineer can con
 Task troubleshooting:
 If you don't forget to modify the script according to your network environment and specific use cases, you shouldn't run into any problems.
 
+Connect to IOS-XE devices:
+Ensure that the device's IP address, username, and password are correctly specified in the device dictionary.
+Verify that the device is reachable from the machine running the script.
+Check for any firewall or access control lists that may be blocking the connection.
+Confirm that SSH is enabled on the IOS-XE device and the correct SSH port (default: 22) is being used.
+
+Send device configuration using an external file:
+Check the file path and ensure that the file containing the configuration commands exists and is accessible.
+Verify the format of the configuration commands in the file. Ensure that each command is on a separate line.
+Validate that the configuration commands are appropriate for the IOS-XE device and its current configuration mode.
+Confirm that the device has the necessary privileges to execute the configuration commands.
+
+Connect using a Python Dictionary:
+Ensure that the dictionary contains the required key-value pairs such as 'device_type', 'ip', 'username', and 'password'.
+Validate that the specified 'device_type' matches the device type (e.g., 'cisco_xe' for IOS-XE devices).
+Check that the IP address, username, and password provided in the dictionary are accurate.
+Verify that the necessary Python libraries (e.g., Netmiko, Paramiko) are installed and up-to-date.
+
+Execute a script with a Function or classes:
+Ensure that the function or class that performs the connection and operations on the IOS-XE devices is defined correctly.
+Verify that the function or class is called with the appropriate arguments (e.g., the device dictionary, configuration commands).
+Check for any syntax errors or logical errors in the script.
+Validate that the required libraries and dependencies are imported and available.
+
+Execute a script with if, if-else, else statements:
+Confirm that the conditions specified in the if, if-else, else statements accurately match the desired logic.
+Validate that the commands executed within each branch of the if statements are correct and appropriate for the task.
+Ensure that the necessary variables, functions, or classes are defined and accessible within the script.
+Check for any indentation errors, as Python relies on proper indentation to define code blocks.
+By troubleshooting a
 Task verification:
 -
