@@ -3,6 +3,8 @@ Task preparation and implementation:
 - Sending single show command
 - Sending multiple show commands
 - Send multiple configuration commands to a single device
+You can find sample python scripts in LAB-6 ScriptsFile.
+Remember to modify the script according to your network environment and specific use cases.
 
 Part 2: Connect to multiple IOS devices
 Task preparation and implementation:
@@ -15,6 +17,8 @@ Task preparation and implementation:
 - Connect using a Python Dictionary
 - Execute a script with a Function or classes
 - Execute a script with a statements (if, ifelse, else)
+You can find sample python scripts in LAB-6 ScriptsFile.
+Remember to modify the script according to your network environment and specific use cases.
 
 Part 3: Connect to IOS-XE devices
 Task preparation and implementation:
@@ -27,12 +31,19 @@ Task preparation and implementation:
 - Connect using a Python Dictionary
 - Execute a script with a Function or classes
 - Execute a script with a statements (if, ifelse, else)
+You can find sample python scripts in LAB-6 ScriptsFile.
+Remember to modify the script according to your network environment and specific use cases.
 
 Part 4: Create an challenging excited script as a network
 Task preparation and implementation:
 - Create an exciting and challenging script that a network engineer in a programmable era
 would use every day. 
+You can find sample python scripts in LAB-6 ScriptsFile.
+Remember to modify the script according to your network environment and specific use cases.
+In the script included in LAB-6 ScriptsFile_Part 4, the network engineer can connect to Cisco IOS devices, retrieve device information, send device configuration commands, and perform advanced operations.
 
 Task troubleshooting:
+If you don't forget to modify the script according to your network environment and specific use cases, you shouldn't run into any problems.
 
 Task verification:
+-
